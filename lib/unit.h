@@ -6,6 +6,7 @@
 using namespace std;
 
 namespace unit_test {
+// UnitCase, includes name and a function to run. If the running function throw an exception, it means case fail, otherwise case pass.
 class UnitCase {
 private:
   function<void()> caseFun;
@@ -15,6 +16,7 @@ public:
   void run();
 };
 
+// CaseResult, collect the information of running a case.
 class CaseResult {
 public:
   string caseName;
@@ -34,6 +36,7 @@ private:
   vector<UnitCase> unitCases;
 };
 
+  // help functions for easy to set up test cases.
   UnitCase test(string name, function<void()> fun);
   UnitGroup group(string name, vector<UnitCase> cases);
 }
