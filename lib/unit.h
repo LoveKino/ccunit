@@ -9,12 +9,12 @@ using namespace std;
 namespace unit_test {
 // UnitCase, includes name and a function to run. If the running function throw an exception, it means case fail, otherwise case pass.
 class UnitCase {
+public:
+  UnitCase(string name, function<void()> fun): caseName(name), caseFun(fun) {}
+  string caseName;
+  void run();
 private:
   function<void()> caseFun;
-public:
-  string caseName;
-  UnitCase(string name, function<void()> fun): caseName(name), caseFun(fun) {}
-  void run();
 };
 
 // CaseResult, collect the information of running a case.
