@@ -12,7 +12,7 @@ class UnitCase {
 private:
   function<void()> caseFun;
 public:
-  string caseName;
+  string caseName = "";
   UnitCase(string name, function<void()> fun): caseName(name), caseFun(fun) {}
   void run();
 };

@@ -52,9 +52,9 @@ namespace unit_test {
         auto duration = caseRetP->endTime - caseRetP->startTime;
 
         if(caseRetP->pass) {
-          cout << "  " << getTextWithColor("✓ [" + caseRetP->caseName + "] " + caseRetP->errMsg, GREEN) << "(" << (caseRetP->endTime - caseRetP->startTime) << "ms)" << endl;
+          cout << "  " << getTextWithColor("✓ [" + caseRetP->caseName + "] " + caseRetP->errMsg, GREEN) << "(" << (duration) << "ms)" << endl;
         } else {
-          cout << "  " << getTextWithColor("✘ [" + caseRetP->caseName + "] " + caseRetP->errMsg, RED) << "(" << (caseRetP->endTime - caseRetP->startTime) << "ms)" << endl;
+          cout << "  " << getTextWithColor("✘ [" + caseRetP->caseName + "] " + caseRetP->errMsg, RED) << "(" << (duration) << "ms)" << endl;
         }
     }
   }
